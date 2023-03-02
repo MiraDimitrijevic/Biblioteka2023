@@ -1,5 +1,7 @@
 package biblioteka;
 
+import java.util.List;
+
 public class Knjiga {
 	
 	private String naslov;
@@ -15,10 +17,10 @@ public class Knjiga {
 	public void setISBN(long iSBN) {
 		ISBN = iSBN;
 	}
-	public String getAutori() {
+	public List<Autor> getAutori() {
 		return autori;
 	}
-	public void setAutori(String autori) {
+	public void setAutori(List<Autor> autori) {
 		this.autori = autori;
 	}
 	public String getIzdavac() {
@@ -34,7 +36,7 @@ public class Knjiga {
 		this.izdanje = izdanje;
 	}
 	private long ISBN;
-	private String autori;
+	private List<Autor> autori;
 	private String izdavac;
 	private int izdanje;
 	
