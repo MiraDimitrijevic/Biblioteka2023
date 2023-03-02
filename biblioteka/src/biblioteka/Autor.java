@@ -18,7 +18,7 @@ public class Autor {
 	private String prezime;
 	@Override
 	public String toString() {
-		return ime + " " + prezime;
+		return ime + ", " + prezime;
 	}
 	@Override
 	public int hashCode() {
