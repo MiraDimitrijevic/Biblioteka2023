@@ -39,6 +39,29 @@ public class Knjiga {
 	private List<Autor> autori;
 	private String izdavac;
 	private int izdanje;
+	@Override
+	public String toString() {
+		return "Knjiga [naslov=" + naslov + ", ISBN=" + ISBN + ", autori=" + autori + ", izdavac=" + izdavac
+				+ ", izdanje=" + izdanje + "]";
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (ISBN ^ (ISBN >>> 32));
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Knjiga))
+			return false;
+		Knjiga other = (Knjiga) obj;
+		if (ISBN != other.ISBN)
+			return false;
+		return true;
+	}
 	
 	
 

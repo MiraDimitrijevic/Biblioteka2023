@@ -16,5 +16,37 @@ public class Autor {
 		this.prezime = prezime;
 	}
 	private String prezime;
+	@Override
+	public String toString() {
+		return ime + " " + prezime;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((ime == null) ? 0 : ime.hashCode());
+		result = prime * result + ((prezime == null) ? 0 : prezime.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Autor))
+			return false;
+		Autor other = (Autor) obj;
+		if (ime == null) {
+			if (other.ime != null)
+				return false;
+		} else if (!ime.equals(other.ime))
+			return false;
+		if (prezime == null) {
+			if (other.prezime != null)
+				return false;
+		} else if (!prezime.equals(other.prezime))
+			return false;
+		return true;
+	}
+	
 	
 }
