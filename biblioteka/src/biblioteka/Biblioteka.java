@@ -28,6 +28,9 @@ knjige.remove(knjiga);
 
 	@Override
 	public List<Knjiga> pronadjiKnjigu(Autor autor, long ISBN, String naslov, String izdavac) {
+		if(autor==null && ISBN<0 && naslov==null && izdavac==null)
+		 return null;
+			
 		List<Knjiga> listaRezultati= new ArrayList<>();
 		for(Knjiga k :knjige) {
 			if(k.getNaslov().toLowerCase().contains(naslov.toLowerCase().trim())) {
