@@ -8,6 +8,8 @@ import biblioteka.interfejs.BibliotekaInterfejs;
 public class Biblioteka implements BibliotekaInterfejs {
 	
 	private List<Knjiga> knjige= new ArrayList<Knjiga>();
+	
+	//Ovo je metoda za dodavanje knjige u biblioteku
 
 	@Override
 	public void dodajknjigu(Knjiga knjiga) {
